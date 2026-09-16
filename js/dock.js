@@ -1,11 +1,12 @@
 let hideTimer;
 let dock = document.getElementById("dock");
-let preview = document.getElementById("preview");
+let content = document.getElementById("content");
+let hideTimer;
 let dockHovered = false;
 
 function showDock() {
     dock.classList.add("dock_active")
-    preview.classList.add("dock_active")
+    content.classList.add("dock_active")
 
     clearTimeout(hideTimer);
 
@@ -17,7 +18,7 @@ function showDock() {
 function hideDock() {
     if (dockHovered) return;
     dock.classList.remove("dock_active");
-    preview.classList.remove("dock_active");
+    content.classList.remove("dock_active");
 }
 
 document.addEventListener("mousemove", (event) => {
