@@ -1,0 +1,48 @@
+* {
+    width: 100%;
+    overflow: hidden;
+
+    transition: all 1s;
+
+    --dock-height: 5%;
+    --active-dock-padding: 10px;
+    --hug-softness: 10px;
+    --dock-color: cornflowerblue;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical */
+    align-items: center;     /* horizontal */
+
+    background-color: var(--dock-color)
+}
+
+#dock {
+    width: 100%;
+    height: 0%;
+}
+
+#dock.dock_active {
+    height: var(--dock-height);
+}
+
+#preview {
+    height: 100%;
+
+    background-color: brown;
+}
+
+#preview.dock_active {
+    height: calc(100% - var(--dock-height));
+    transform: scale(0.97);
+    border-radius: var(--hug-softness);
+}
