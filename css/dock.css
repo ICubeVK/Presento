@@ -2,7 +2,7 @@
     width: 100%;
     overflow: hidden;
 
-    transition: all 1s;
+    transition: all 1s cubic-bezier( 0.23, 1.00, 0.32, 1.00 );
 
     --dock-height: 5%;
     --active-dock-padding: 10px;
