@@ -1,4 +1,5 @@
-let hideTimer;
+const dockTimer = 1500; //milliseconds
+
 let dock = document.getElementById("dock");
 let content = document.getElementById("content");
 let hideTimer;
@@ -11,7 +12,7 @@ function showDock() {
     clearTimeout(hideTimer);
 
     if (!dockHovered) {
-        hideTimer = setTimeout(hideDock, 2000);
+        hideTimer = setTimeout(hideDock, dockTimer);
     }
 }
 
@@ -37,7 +38,6 @@ dock.addEventListener("mouseenter", () => {
 
 dock.addEventListener("mouseleave", () => {
     dockHovered = false;
-
     // Start the timer again once the mouse leaves
-    hideTimer = setTimeout(hideDock, 2000);
+    hideTimer = setTimeout(hideDock, dockTimer);
 });
